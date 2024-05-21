@@ -8,13 +8,6 @@
   </suppress>
   <suppress>
     <notes><![CDATA[
-   file name: avro-schema-as-pact-contract-0.0.2.zip: support-4.5.8.jar
-   ]]></notes>
-    <sha1>544d3ee9045f69c1d5ee9cd1053d38ecc064aca3</sha1>
-    <cpe>cpe:/a:gradle:gradle</cpe>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
    file name: avro-schema-as-pact-contract-0.0.2.zip: pactbroker-4.5.8.jar
    ]]></notes>
     <sha1>f0cfd4414f4f0cace3176684d1607a5ca1694ed4</sha1>

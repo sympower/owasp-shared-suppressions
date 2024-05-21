@@ -1,4 +1,5 @@
 <suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+  <!-- See https://jeremylong.github.io/DependencyCheck/general/suppression.html on how to suppress -->
   <suppress>
     <notes><![CDATA[
    file name: avro-schema-as-pact-contract-0.0.2.zip: support-4.5.8.jar

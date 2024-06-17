@@ -35,4 +35,11 @@
     <sha1>fe08b2c9450f2375f380d550c47a539f5341cc0c</sha1>
     <cpe>cpe:/a:netty:netty</cpe>
   </suppress>
+  <suppress>
+   <notes><![CDATA[
+   file name: protoc-gen-grpc-kotlin-1.4.1-jdk8.jar
+   ]]></notes>
+   <packageUrl regex="true">^pkg:maven/io\.grpc/protoc\-gen\-grpc\-kotlin@.*$</packageUrl>
+   <cve>CVE-2020-7768</cve>
+</suppress>
 </suppressions>

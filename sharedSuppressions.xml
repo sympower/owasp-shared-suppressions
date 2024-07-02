@@ -37,6 +37,20 @@
   </suppress>
   <suppress>
    <notes><![CDATA[
+   file name: avro-schema-as-pact-contract-0.0.3.zip: grpc-netty-1.65.0.jar
+   ]]></notes>
+   <sha1>99117868510397d7a694649493fef6dbc32dff03</sha1>
+   <cve>CVE-2019-20444</cve>
+  </suppress>
+  <suppress>
+   <notes><![CDATA[
+   file name: avro-schema-as-pact-contract-0.0.3.zip: grpc-netty-1.65.0.jar
+   ]]></notes>
+   <sha1>99117868510397d7a694649493fef6dbc32dff03</sha1>
+   <cve>CVE-2019-20445</cve>
+</suppress>
+  <suppress>
+   <notes><![CDATA[
    file name: protoc-gen-grpc-kotlin-1.4.1-jdk8.jar
    ]]></notes>
    <packageUrl regex="true">^pkg:maven/io\.grpc/protoc\-gen\-grpc\-kotlin@.*$</packageUrl>

@@ -1,5 +1,6 @@
 <suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
   <!-- See https://jeremylong.github.io/DependencyCheck/general/suppression.html on how to suppress -->
+  <!-- False positive, as this is related to contract testing -->
   <suppress>
     <notes><![CDATA[
    file name: avro-schema-as-pact-contract-0.0.2.zip: support-4.5.8.jar
@@ -7,6 +8,7 @@
     <sha1>544d3ee9045f69c1d5ee9cd1053d38ecc064aca3</sha1>
     <cpe>cpe:/a:gradle:gradle</cpe>
   </suppress>
+  <!-- False positive, as this is related to contract testing -->
   <suppress>
     <notes><![CDATA[
    file name: avro-schema-as-pact-contract-0.0.2.zip: pactbroker-4.5.8.jar
@@ -14,6 +16,7 @@
     <sha1>f0cfd4414f4f0cace3176684d1607a5ca1694ed4</sha1>
     <cpe>cpe:/a:gradle:gradle</cpe>
   </suppress>
+  <!-- False positive, as this is related to contract testing -->
   <suppress>
     <notes><![CDATA[
    file name: avro-schema-as-pact-contract-0.0.2.zip: model-4.5.8.jar
@@ -21,6 +24,7 @@
     <sha1>f1f18f48ec1d9625ab2c1434925420113622cda6</sha1>
     <cpe>cpe:/a:gradle:gradle</cpe>
   </suppress>
+  <!-- False positive, as this is related to contract testing -->
   <suppress>
     <notes><![CDATA[
    file name: avro-schema-as-pact-contract-0.0.2.zip: core-0.4.2.jar
@@ -28,6 +32,7 @@
     <sha1>2d300a00731f35483c9f2924129d945afb7195ef</sha1>
     <cpe>cpe:/a:gradle:gradle</cpe>
   </suppress>
+  <!-- False positive, as this is related to contract testing -->
   <suppress>
     <notes><![CDATA[
    file name: avro-schema-as-pact-contract-0.0.2.zip: grpc-netty-1.62.2.jar
@@ -35,6 +40,7 @@
     <sha1>fe08b2c9450f2375f380d550c47a539f5341cc0c</sha1>
     <cpe>cpe:/a:netty:netty</cpe>
   </suppress>
+  <!-- False positive, as this is related to contract testing -->
   <suppress>
    <notes><![CDATA[
    file name: avro-schema-as-pact-contract-0.0.3.zip: grpc-netty-1.65.0.jar
@@ -42,13 +48,23 @@
    <sha1>99117868510397d7a694649493fef6dbc32dff03</sha1>
    <cve>CVE-2019-20444</cve>
   </suppress>
+  <!-- False positive, as this is related to contract testing -->
   <suppress>
    <notes><![CDATA[
    file name: avro-schema-as-pact-contract-0.0.3.zip: grpc-netty-1.65.0.jar
    ]]></notes>
    <sha1>99117868510397d7a694649493fef6dbc32dff03</sha1>
    <cve>CVE-2019-20445</cve>
-</suppress>
+  </suppress>
+  <!-- Comes transitively from pulsar-client. Not affecting us, as this has to do with compression/decompression
+   of data from untrusted users but in our case Pulsar runs in an isolated network -->
+  <suppress>
+    <notes><![CDATA[
+   file name: pulsar-client-3.2.1.2-sympower.jar (shaded: io.airlift:aircompressor:0.20)
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/io\.airlift/aircompressor@.*$</packageUrl>
+    <vulnerabilityName>CVE-2024-36114</vulnerabilityName>
+  </suppress>
   <suppress>
    <notes><![CDATA[
    file name: protoc-gen-grpc-kotlin-1.4.1-jdk8.jar

@@ -66,10 +66,21 @@
     <vulnerabilityName>CVE-2024-36114</vulnerabilityName>
   </suppress>
   <suppress>
-   <notes><![CDATA[
+    <notes><![CDATA[
    file name: protoc-gen-grpc-kotlin-1.4.1-jdk8.jar
    ]]></notes>
-   <packageUrl regex="true">^pkg:maven/io\.grpc/protoc\-gen\-grpc\-kotlin@.*$</packageUrl>
-   <cve>CVE-2020-7768</cve>
-</suppress>
+    <packageUrl regex="true">^pkg:maven/io\.grpc/protoc\-gen\-grpc\-kotlin@.*$</packageUrl>
+    <cve>CVE-2020-7768</cve>
+  </suppress>
+  <!-- Comes transitively from the old spring-boot-dependencies version we're using here (3.2.5)
+  https://github.com/sympower/sympower-gradle-plugins/blob/0072cb025362ac243de5527e59dda131185da217/src/main/kotlin/sym-msa.bom-conventions.gradle.kts#L21
+  It gets patched at the still unreleased 3.3.3 spring upgrade (https://github.com/spring-projects/spring-boot/milestone/355). 
+  Suppressing globally to avoid the noise as it is unlikely to affect us (we don't use etags). Will be auto resolved once we upgrade spring-->
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-web-6.1.6.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring-web@.*$</packageUrl>
+    <vulnerabilityName>CVE-2024-38809</vulnerabilityName>
+  </suppress>
 </suppressions>
